@@ -1,0 +1,93 @@
+  
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  }
+  
+  body{
+    background: #eee;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  
+  .main{
+    width: 227px;
+    height: 60px;
+    background: #eee;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s all;
+    transition-delay: .2s;
+    box-shadow: 0px 8px 30px rgba(178, 188, 189);
+  }
+  
+  
+  i{
+    color: #B4B4B4;
+    font-size: 2em;
+    margin: 10px;
+    transition: .3s ease-in-out;
+    padding: 10px;
+  }
+  
+  i:hover{
+    color: #7A7675;
+  }
+  
+  label{
+    position: absolute;
+    right: 42%;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background: #ff0404;
+    color: #fff;
+    font-size: 2em;
+    border-radius: 50%;
+    transition: .4s all;
+    cursor: pointer;
+    line-height: 2px;
+  }
+  
+  #chk:checked ~ label{
+    transform: translateX(-410%) rotateZ(404deg);
+  }
+  
+  input[type=text]{
+    position: absolute;
+    right: 42%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    color: #eee;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: .4s ease;
+    visibility: hidden;
+    text-align: center;
+  }
+  
+  input[type=text]::placeholder{
+    color: #eee;
+    font-size: 18px;
+  }
+  
+  #chk:checked ~ input[type=text]{
+    width: 15.5%;
+    background: #000000;
+    border-radius: 40px;
+    visibility: visible;
+  }
+  
+  #chk:checked ~ .main{
+    box-shadow: 0 0 0 50em #479493;
+  }
